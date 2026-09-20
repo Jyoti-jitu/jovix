@@ -23,10 +23,10 @@ export default function ContactCTA() {
     <section id="contact" className="w-full py-16 lg:py-24 bg-[#FAFAF8] border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
           
           {/* Left Column: Context & Direct Value */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
                 <span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
@@ -45,8 +45,8 @@ export default function ContactCTA() {
               </p>
             </div>
 
-            {/* 3 Trust Points */}
-            <div className="space-y-4 pt-2">
+            {/* 2 Trust Points */}
+            <div className="space-y-3 pt-1">
               <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-slate-200/70 shadow-xs">
                 <div className="p-2 rounded-xl bg-blue-50 text-blue-600 shrink-0">
                   <Send className="w-4 h-4" />
@@ -98,9 +98,9 @@ export default function ContactCTA() {
             </div>
           </div>
 
-          {/* Right Column: Modern Form Card */}
-          <div className="lg:col-span-7">
-            <div className="p-7 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl shadow-slate-200/40">
+          {/* Right Column: Modern Form Card (Equal 50% width) */}
+          <div className="w-full flex flex-col justify-between">
+            <div className="p-7 sm:p-9 rounded-3xl bg-white border border-slate-200 shadow-xl shadow-slate-200/40 h-full flex flex-col justify-between">
               
               {submitted ? (
                 <div className="text-center py-12 space-y-4 animate-in fade-in">
