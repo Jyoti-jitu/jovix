@@ -12,11 +12,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
         
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
-            J
+          <div className="h-9 w-9 rounded-xl overflow-hidden shadow-md bg-white border border-slate-800 flex items-center justify-center p-0.5">
+            <img src="/jovix-logo.jpg" alt="Jovix Logo" className="w-full h-full object-cover rounded-lg" />
           </div>
           <div>
-            <span className="font-semibold text-white">Jovix</span>
+            <span className="font-black text-white text-base tracking-tight flex items-center gap-1">
+              JOVIX
+              <span className="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+            </span>
             <span className="block text-xs text-slate-400">jovix.co.uk • Digital Product Studio</span>
           </div>
         </div>

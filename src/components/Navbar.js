@@ -23,14 +23,15 @@ export default function Navbar() {
         {/* Logo & Status */}
         <div className="flex items-center gap-6">
           <a href="#" className="flex items-center gap-3 group">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-              J
+            <div className="h-10 w-10 rounded-xl overflow-hidden shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform bg-white border border-slate-100 flex items-center justify-center p-0.5">
+              <img src="/jovix-logo.jpg" alt="Jovix Logo" className="w-full h-full object-cover rounded-lg" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-slate-900 text-base leading-tight group-hover:text-blue-600 transition-colors">
-                Jovix
+              <span className="font-black text-slate-900 text-lg tracking-tight leading-tight group-hover:text-blue-600 transition-colors flex items-center gap-1">
+                JOVIX
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-600"></span>
               </span>
-              <span className="text-xs text-slate-500 font-medium">
+              <span className="text-[11px] text-slate-500 font-medium tracking-wide">
                 jovix.co.uk
               </span>
             </div>
