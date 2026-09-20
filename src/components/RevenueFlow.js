@@ -20,7 +20,7 @@ export default function RevenueFlow() {
   ];
 
   return (
-    <section className="w-full py-12 lg:py-16 bg-white border-b border-slate-200/80">
+    <section className="w-full py-16 lg:py-20 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}

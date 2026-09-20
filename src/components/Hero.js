@@ -21,8 +21,8 @@ export default function Hero() {
 
   return (
     <section className="relative isolate w-full h-[calc(100vh-5rem)] max-h-[calc(100vh-5rem)] flex flex-col justify-between overflow-hidden px-6 py-6 sm:py-8 lg:py-10 bg-slate-950">
-      {/* Full-Screen Pure Video - Uncropped 16:9 Fit */}
-      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden pointer-events-none flex items-center justify-center bg-slate-950">
+      {/* Full-Screen Pure Video - True Aspect Ratio Cover (No Distortion) */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden pointer-events-none bg-slate-950">
         <video
           ref={videoRef}
           autoPlay
@@ -31,22 +31,22 @@ export default function Hero() {
           playsInline
           preload="auto"
           poster="/video-thumb.jpg"
-          className="w-full h-full object-cover"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-none object-cover"
         >
           <source src="/Procedural-Gradient-Background.mp4" type="video/mp4" />
         </video>
-        {/* Subtle bottom vignette to ensure buttons and text are crisp */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+        {/* Subtle top & bottom gradient vignette to keep badge, text, and buttons crisp */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-transparent to-slate-950/80 pointer-events-none" />
       </div>
 
-      {/* Top: Availability Badge on top of the video */}
-      <div className="relative z-10 w-full flex justify-center pt-2 sm:pt-4">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold shadow-lg">
+      {/* Top: Restyled Availability Badge */}
+      <div className="relative z-10 w-full flex justify-center pt-3 sm:pt-6">
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 backdrop-blur-xl border border-emerald-500/30 text-xs font-semibold text-slate-100 shadow-xl shadow-black/40 hover:border-emerald-400/60 transition-all">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span>Available for new projects</span>
+          <span className="text-emerald-300 font-bold uppercase tracking-wider text-[11px]">Available for new projects</span>
         </div>
       </div>
 
