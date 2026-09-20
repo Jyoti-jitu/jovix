@@ -133,7 +133,7 @@ export default function ContactCTA() {
                   </a>
                 </div>
 
-                {/* Direct Founder Email */}
+                {/* Direct Founder Email - Jyoti */}
                 <div className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
                   <a
                     href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix"
@@ -144,13 +144,37 @@ export default function ContactCTA() {
                     </div>
                     <div>
                       <span className="text-sm font-bold text-slate-900 group-hover:text-purple-600 transition-colors block">jyotiswarupparhi@gmail.com</span>
-                      <span className="text-[10px] text-slate-500">Direct Founder Email</span>
+                      <span className="text-[10px] text-slate-500">Jyoti (Jitu) • Co-Founder & Tech</span>
                     </div>
                   </a>
 
                   <a
                     href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix"
                     className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-purple-600 hover:text-white hover:border-purple-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1 shadow-2xs group cursor-pointer"
+                  >
+                    <span>Send Email</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+
+                {/* Direct Founder Email - Jay */}
+                <div className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                  <a
+                    href="mailto:jay@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix"
+                    className="flex items-center gap-2.5 group cursor-pointer"
+                  >
+                    <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-slate-900 group-hover:text-emerald-600 transition-colors block">jay@jovix.co.uk</span>
+                      <span className="text-[10px] text-slate-500">Jay • Co-Founder & Product</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:jay@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix"
+                    className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-emerald-600 hover:text-white hover:border-emerald-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1 shadow-2xs group cursor-pointer"
                   >
                     <span>Send Email</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -285,10 +309,13 @@ export default function ContactCTA() {
                           You can also reach out directly to{" "}
                           <a href="mailto:hello@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix" className="font-semibold text-blue-600 underline cursor-pointer">
                             hello@jovix.co.uk
-                          </a>{" "}
-                          or{" "}
+                          </a>,{" "}
                           <a href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix" className="font-semibold text-purple-600 underline cursor-pointer">
                             jyotiswarupparhi@gmail.com
+                          </a>{" "}
+                          or{" "}
+                          <a href="mailto:jay@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix" className="font-semibold text-emerald-600 underline cursor-pointer">
+                            jay@jovix.co.uk
                           </a>
                         </p>
                       </div>
