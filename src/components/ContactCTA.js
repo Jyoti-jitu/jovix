@@ -15,6 +15,12 @@ export default function ContactCTA() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const directEmail = "hello@jovix.co.uk";
+  const mailtoUrl = `mailto:${directEmail}?cc=jyotiswarupparhi@gmail.com&subject=${encodeURIComponent("Project Inquiry — Jovix")}&body=${encodeURIComponent("Hi Jyoti & the Jovix team,\n\nI would like to discuss a project with Jovix:\n\n- Scope / Goal:\n- Timeline:\n\nBest regards,")}`;
+
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+    window.location.href = mailtoUrl;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -110,20 +116,22 @@ export default function ContactCTA() {
               </span>
               <div className="flex items-center justify-between gap-3">
                 <a
-                  href={`mailto:${directEmail}`}
-                  className="flex items-center gap-2.5 group"
+                  href={mailtoUrl}
+                  onClick={handleSendEmail}
+                  className="flex items-center gap-2.5 group cursor-pointer"
                 >
                   <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors block">{directEmail}</span>
-                    <span className="text-[11px] text-slate-500">Click to compose email</span>
+                    <span className="text-[11px] text-slate-500">Click to open mail app</span>
                   </div>
                 </a>
 
                 <a
-                  href={`mailto:${directEmail}`}
+                  href={mailtoUrl}
+                  onClick={handleSendEmail}
                   className="px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
                 >
                   <span>Send Email</span>
@@ -256,7 +264,7 @@ export default function ContactCTA() {
                         <p>{errorMessage}</p>
                         <p className="mt-1 text-slate-600">
                           You can also reach out directly to{" "}
-                          <a href={`mailto:${directEmail}`} className="font-semibold text-blue-600 underline">
+                          <a href={mailtoUrl} onClick={handleSendEmail} className="font-semibold text-blue-600 underline cursor-pointer">
                             {directEmail}
                           </a>
                         </p>
