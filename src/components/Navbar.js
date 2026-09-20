@@ -36,15 +36,6 @@ export default function Navbar() {
               </span>
             </div>
           </a>
-
-          {/* Availability pill */}
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span>Available for new projects</span>
-          </div>
         </div>
 
         {/* Desktop Nav Links */}
@@ -84,11 +75,6 @@ export default function Navbar() {
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate-200 bg-white px-6 py-6 flex flex-col gap-4 text-base font-medium text-slate-800 shadow-xl animate-in slide-in-from-top-2 duration-200">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium w-fit">
-            <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
-            <span>Available for new projects</span>
-          </div>
-
           {navLinks.map((link) => (
             <a
               key={link.label}
