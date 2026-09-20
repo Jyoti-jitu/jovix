@@ -12,11 +12,37 @@ export default function ContactCTA() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const directEmail = "hello@jovix.co.uk";
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.message || "Failed to submit inquiry. Please try again or email directly.");
+      }
+    } catch (err) {
+      console.error("Form submit error:", err);
+      setErrorMessage("Network error occurred. Please try again or email us directly at hello@jovix.co.uk.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -115,7 +141,10 @@ export default function ContactCTA() {
                   </p>
                   <div className="pt-4">
                     <button
-                      onClick={() => setSubmitted(false)}
+                      onClick={() => {
+                        setSubmitted(false);
+                        setFormData({ name: "", email: "", projectType: "Website", message: "" });
+                      }}
                       className="px-6 py-2.5 rounded-xl border border-slate-200 text-xs font-bold uppercase tracking-wider text-slate-700 hover:bg-slate-50 transition-colors"
                     >
                       Send another message
@@ -202,14 +231,40 @@ export default function ContactCTA() {
                     />
                   </div>
 
+                  {/* Error Alert */}
+                  {errorMessage && (
+                    <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium flex items-start gap-2.5">
+                      <span className="shrink-0 text-red-500 font-bold">⚠️</span>
+                      <div>
+                        <p>{errorMessage}</p>
+                        <p className="mt-1 text-slate-600">
+                          You can also reach out directly to{" "}
+                          <a href={`mailto:${directEmail}`} className="font-semibold text-blue-600 underline">
+                            {directEmail}
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Submit Button & Privacy */}
                   <div className="space-y-2.5 pt-1">
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl bg-blue-600 text-white text-sm sm:text-base font-bold hover:bg-blue-700 active:scale-[0.99] shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                      disabled={isSubmitting}
+                      className="w-full py-4 rounded-xl bg-blue-600 text-white text-sm sm:text-base font-bold hover:bg-blue-700 active:scale-[0.99] disabled:opacity-75 disabled:cursor-not-allowed shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all flex items-center justify-center gap-2 group cursor-pointer"
                     >
-                      <span>Submit Project Inquiry</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                          <span>Sending Inquiry...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit Project Inquiry</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </>
+                      )}
                     </button>
 
                     <p className="text-center text-xs text-slate-400">
