@@ -20,9 +20,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative isolate w-full h-[calc(100vh-5rem)] max-h-[calc(100vh-5rem)] flex flex-col justify-end overflow-hidden px-6 py-6 sm:py-8 lg:py-10">
-      {/* Full-Screen Pure Video */}
-      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden pointer-events-none">
+    <section className="relative isolate w-full h-[calc(100vh-5rem)] max-h-[calc(100vh-5rem)] flex flex-col justify-end overflow-hidden px-6 py-6 sm:py-8 lg:py-10 bg-slate-950">
+      {/* Full-Screen Pure Video - Uncropped 16:9 Fit */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden pointer-events-none flex items-center justify-center bg-slate-950">
         <video
           ref={videoRef}
           autoPlay
@@ -31,7 +31,7 @@ export default function Hero() {
           playsInline
           preload="auto"
           poster="/video-thumb.jpg"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         >
           <source src="/Procedural-Gradient-Background.mp4" type="video/mp4" />
         </video>
