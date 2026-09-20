@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUp, Mail, ArrowRight, ShieldCheck, Globe, Send, Sparkles } from "lucide-react";
 
 export default function Footer() {
@@ -52,7 +53,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl overflow-hidden shadow-md bg-white border border-slate-800 flex items-center justify-center p-0.5">
-                <img src="/jovix-logo.jpg" alt="Jovix Logo" className="w-full h-full object-cover rounded-lg" />
+                <Image src="/jovix-logo.jpg" alt="Jovix Logo" width={40} height={40} className="w-full h-full object-cover rounded-lg" />
               </div>
               <div>
                 <span className="font-black text-white text-lg tracking-tight flex items-center gap-1">

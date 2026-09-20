@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ArrowRight, Menu, X, Sparkles } from "lucide-react";
 
 export default function Navbar() {
@@ -17,14 +18,14 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#e6e7e2]/95 backdrop-blur-md border-b border-stone-300/80 transition-all">
+    <header className="sticky top-0 z-50 w-full bg-[#e6e7e2]/75 backdrop-blur-md border-b border-stone-300/80 transition-all">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Logo & Status */}
         <div className="flex items-center gap-6">
           <a href="#" className="flex items-center gap-3 group">
             <div className="h-10 w-10 rounded-xl overflow-hidden shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform bg-white border border-slate-100 flex items-center justify-center p-0.5">
-              <img src="/jovix-logo.jpg" alt="Jovix Logo" className="w-full h-full object-cover rounded-lg" />
+              <Image src="/jovix-logo.jpg" alt="Jovix Logo" width={40} height={40} className="w-full h-full object-cover rounded-lg" priority />
             </div>
             <div className="flex flex-col">
               <span className="font-black text-slate-900 text-lg tracking-tight leading-tight group-hover:text-blue-600 transition-colors flex items-center gap-1">
