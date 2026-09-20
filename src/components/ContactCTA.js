@@ -14,13 +14,6 @@ export default function ContactCTA() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const directEmail = "hello@jovix.co.uk";
-  const mailtoUrl = `mailto:${directEmail}?cc=jyotiswarupparhi@gmail.com&subject=${encodeURIComponent("Project Inquiry — Jovix")}&body=${encodeURIComponent("Hi Jyoti & the Jovix team,\n\nI would like to discuss a project with Jovix:\n\n- Scope / Goal:\n- Timeline:\n\nBest regards,")}`;
-
-  const handleSendEmail = (e) => {
-    e.preventDefault();
-    window.location.href = mailtoUrl;
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -110,33 +103,59 @@ export default function ContactCTA() {
             </div>
 
             {/* Direct Contact Card */}
-            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-3">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-3.5">
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
                 Prefer direct email?
               </span>
-              <div className="flex items-center justify-between gap-3">
-                <a
-                  href={mailtoUrl}
-                  onClick={handleSendEmail}
-                  className="flex items-center gap-2.5 group cursor-pointer"
-                >
-                  <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors block">{directEmail}</span>
-                    <span className="text-[11px] text-slate-500">Click to open mail app</span>
-                  </div>
-                </a>
+              
+              <div className="space-y-2.5">
+                {/* Studio Email */}
+                <div className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                  <a
+                    href="mailto:hello@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix"
+                    className="flex items-center gap-2.5 group cursor-pointer"
+                  >
+                    <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors block">hello@jovix.co.uk</span>
+                      <span className="text-[10px] text-slate-500">Studio Inquiries</span>
+                    </div>
+                  </a>
 
-                <a
-                  href={mailtoUrl}
-                  onClick={handleSendEmail}
-                  className="px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
-                >
-                  <span>Send Email</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </a>
+                  <a
+                    href="mailto:hello@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix"
+                    className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1 shadow-2xs group cursor-pointer"
+                  >
+                    <span>Send Email</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+
+                {/* Direct Founder Email */}
+                <div className="flex items-center justify-between gap-3 p-2.5 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-slate-200 transition-colors">
+                  <a
+                    href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix"
+                    className="flex items-center gap-2.5 group cursor-pointer"
+                  >
+                    <div className="p-2 rounded-lg bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-slate-900 group-hover:text-purple-600 transition-colors block">jyotiswarupparhi@gmail.com</span>
+                      <span className="text-[10px] text-slate-500">Direct Founder Email</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix"
+                    className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-purple-600 hover:text-white hover:border-purple-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1 shadow-2xs group cursor-pointer"
+                  >
+                    <span>Send Email</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -264,8 +283,12 @@ export default function ContactCTA() {
                         <p>{errorMessage}</p>
                         <p className="mt-1 text-slate-600">
                           You can also reach out directly to{" "}
-                          <a href={mailtoUrl} onClick={handleSendEmail} className="font-semibold text-blue-600 underline cursor-pointer">
-                            {directEmail}
+                          <a href="mailto:hello@jovix.co.uk?subject=Project%20Inquiry%20-%20Jovix" className="font-semibold text-blue-600 underline cursor-pointer">
+                            hello@jovix.co.uk
+                          </a>{" "}
+                          or{" "}
+                          <a href="mailto:jyotiswarupparhi@gmail.com?subject=Project%20Inquiry%20-%20Jovix" className="font-semibold text-purple-600 underline cursor-pointer">
+                            jyotiswarupparhi@gmail.com
                           </a>
                         </p>
                       </div>
