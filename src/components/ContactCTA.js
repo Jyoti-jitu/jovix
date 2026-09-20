@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Send, Mail, Check, Copy } from "lucide-react";
+import { ArrowRight, Send, Mail, Check } from "lucide-react";
 
 export default function ContactCTA() {
   const [formData, setFormData] = useState({
@@ -12,14 +12,7 @@ export default function ContactCTA() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [copied, setCopied] = useState(false);
   const directEmail = "hello@jovix.co.uk";
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(directEmail);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,32 +74,26 @@ export default function ContactCTA() {
                 Prefer direct email?
               </span>
               <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-slate-100 text-slate-700">
+                <a
+                  href={`mailto:${directEmail}`}
+                  className="flex items-center gap-2.5 group"
+                >
+                  <div className="p-2 rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-sm font-bold text-slate-900 block">{directEmail}</span>
-                    <span className="text-[11px] text-slate-500">General inquiries & RFPs</span>
+                    <span className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors block">{directEmail}</span>
+                    <span className="text-[11px] text-slate-500">Click to compose email</span>
                   </div>
-                </div>
+                </a>
 
-                <button
-                  onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-white text-slate-700 text-xs font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
+                <a
+                  href={`mailto:${directEmail}`}
+                  className="px-3.5 py-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-700 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs group cursor-pointer"
                 >
-                  {copied ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-emerald-700">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copy</span>
-                    </>
-                  )}
-                </button>
+                  <span>Send Email</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </a>
               </div>
             </div>
           </div>
