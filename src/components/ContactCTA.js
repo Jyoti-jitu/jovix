@@ -22,20 +22,29 @@ export default function ContactCTA() {
     setErrorMessage("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Accept": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          access_key: "51afeb6c-b7b3-4e0c-8978-d50aee9c530d",
+          name: formData.name,
+          email: formData.email,
+          project_type: formData.projectType,
+          message: formData.message,
+          subject: `New Project Inquiry: ${formData.name} (${formData.projectType}) - Jovix`,
+          from_name: "Jovix Website"
+        })
       });
 
       const data = await res.json();
 
-      if (res.ok && data.success) {
+      if (data.success) {
         setSubmitted(true);
       } else {
-        setErrorMessage(data.message || "Failed to submit inquiry. Please try again or email directly.");
+        setErrorMessage(data.message || "Failed to submit inquiry. Please try again.");
       }
     } catch (err) {
       console.error("Form submit error:", err);
@@ -152,7 +161,15 @@ export default function ContactCTA() {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex-1 flex flex-col justify-between gap-6 text-left">
+                <form
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  onSubmit={handleSubmit}
+                  className="flex-1 flex flex-col justify-between gap-6 text-left"
+                >
+                  <input type="hidden" name="access_key" value="51afeb6c-b7b3-4e0c-8978-d50aee9c530d" />
+                  <input type="hidden" name="subject" value={`New Project Inquiry: ${formData.name || "Client"} (${formData.projectType}) - Jovix`} />
+                  <input type="hidden" name="from_name" value="Jovix Website" />
                   
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
