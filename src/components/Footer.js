@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-slate-950 text-white py-12 border-t border-slate-800">
+    <footer className="w-full bg-slate-950 text-white py-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
         
         <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ export default function Footer() {
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div className="max-w-7xl mx-auto px-6 mt-6 pt-4 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <div>
           © {new Date().getFullYear()} Jovix (jovix.co.uk). All rights reserved.
         </div>

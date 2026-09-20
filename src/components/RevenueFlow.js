@@ -20,29 +20,29 @@ export default function RevenueFlow() {
   ];
 
   return (
-    <section className="w-full py-20 lg:py-28 bg-white border-b border-slate-200/80">
+    <section className="w-full py-12 lg:py-16 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 space-y-3">
+        <div className="max-w-3xl mb-8 sm:mb-10 space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold uppercase tracking-wider">
             Commercial Return on Investment
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
             How We Help Businesses Make Money.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600">
+          <p className="text-sm sm:text-base text-slate-600">
             You are not just paying for code. You are investing in an engineered system that turns visitors into paying customers and reduces manual workload.
           </p>
         </div>
 
         {/* 2 Visual Flowcharts */}
-        <div className="space-y-12">
+        <div className="space-y-6">
           
           {/* Flow 1: Websites & Growth */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-blue-50/60 via-indigo-50/40 to-purple-50/60 border border-blue-200/80 shadow-sm space-y-6">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-blue-200/60 pb-4">
-              <span className="font-bold text-sm text-blue-950 uppercase tracking-wide flex items-center gap-2">
+          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-blue-50/60 via-indigo-50/40 to-purple-50/60 border border-blue-200/80 shadow-xs space-y-4">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-blue-200/60 pb-3">
+              <span className="font-bold text-xs sm:text-sm text-blue-950 uppercase tracking-wide flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-blue-600" />
                 HOW A MODERN WEBSITE CREATES REVENUE
               </span>
@@ -50,16 +50,16 @@ export default function RevenueFlow() {
             </div>
 
             {/* Steps Container */}
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-center">
               {websiteSteps.map((step, idx) => (
                 <div key={step.label} className="relative flex flex-col items-center">
-                  <div className={`w-full p-4 rounded-xl border text-center space-y-1 shadow-xs transition-transform hover:scale-105 ${step.color}`}>
-                    <div className="text-xs tracking-wider uppercase font-bold">{step.label}</div>
-                    <div className="text-[11px] opacity-90">{step.desc}</div>
+                  <div className={`w-full p-3 rounded-xl border text-center space-y-1 shadow-xs transition-transform hover:scale-102 ${step.color}`}>
+                    <div className="text-[11px] tracking-wider uppercase font-bold">{step.label}</div>
+                    <div className="text-[10px] opacity-90">{step.desc}</div>
                   </div>
                   {idx < websiteSteps.length - 1 && (
-                    <div className="hidden sm:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                      <ArrowRight className="w-4 h-4 text-slate-400" />
+                    <div className="hidden sm:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10">
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                     </div>
                   )}
                 </div>
@@ -68,9 +68,9 @@ export default function RevenueFlow() {
           </div>
 
           {/* Flow 2: Custom Software & Efficiency */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-rose-50/60 via-amber-50/40 to-emerald-50/60 border border-rose-200/80 shadow-sm space-y-6">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rose-200/60 pb-4">
-              <span className="font-bold text-sm text-slate-950 uppercase tracking-wide flex items-center gap-2">
+          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-rose-50/60 via-amber-50/40 to-emerald-50/60 border border-rose-200/80 shadow-xs space-y-4">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rose-200/60 pb-3">
+              <span className="font-bold text-xs sm:text-sm text-slate-950 uppercase tracking-wide flex items-center gap-2">
                 <Zap className="w-4 h-4 text-rose-600" />
                 HOW CUSTOM SOFTWARE SAVES MONEY & SCALES
               </span>
@@ -78,16 +78,16 @@ export default function RevenueFlow() {
             </div>
 
             {/* Steps Container */}
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-2.5 items-center">
               {softwareSteps.map((step, idx) => (
                 <div key={step.label} className="relative flex flex-col items-center">
-                  <div className={`w-full p-4 rounded-xl border text-center space-y-1 shadow-xs transition-transform hover:scale-105 ${step.color}`}>
-                    <div className="text-xs tracking-wider uppercase font-bold">{step.label}</div>
-                    <div className="text-[11px] opacity-90">{step.desc}</div>
+                  <div className={`w-full p-3 rounded-xl border text-center space-y-1 shadow-xs transition-transform hover:scale-102 ${step.color}`}>
+                    <div className="text-[11px] tracking-wider uppercase font-bold">{step.label}</div>
+                    <div className="text-[10px] opacity-90">{step.desc}</div>
                   </div>
                   {idx < softwareSteps.length - 1 && (
-                    <div className="hidden sm:block absolute -right-3 top-1/2 -translate-y-1/2 z-10">
-                      <ArrowRight className="w-4 h-4 text-slate-400" />
+                    <div className="hidden sm:block absolute -right-2.5 top-1/2 -translate-y-1/2 z-10">
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
                     </div>
                   )}
                 </div>
@@ -98,18 +98,18 @@ export default function RevenueFlow() {
         </div>
 
         {/* Takeaway quote box */}
-        <div className="mt-12 p-6 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 p-5 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">
-            <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+            <span className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider">
               The Real Takeaway
             </span>
-            <p className="text-sm sm:text-base font-medium text-slate-200">
+            <p className="text-xs sm:text-sm font-medium text-slate-200">
               “Every rupee you spend on digital products should come back with measurable business leverage.”
             </p>
           </div>
           <a
             href="#contact"
-            className="px-5 py-2.5 rounded-xl bg-white text-slate-900 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors shrink-0"
+            className="px-4 py-2 rounded-xl bg-white text-slate-900 text-xs font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors shrink-0"
           >
             Start a Conversation →
           </a>

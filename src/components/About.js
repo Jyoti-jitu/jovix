@@ -21,13 +21,13 @@ function LinkedinIcon({ className = "w-4 h-4" }) {
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-20 lg:py-28 bg-[#FAFAF8] border-b border-slate-200/80">
+    <section id="about" className="w-full py-12 lg:py-16 bg-[#FAFAF8] border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="max-w-4xl mx-auto p-8 sm:p-14 rounded-3xl bg-white border border-slate-200/80 shadow-sm space-y-8">
+        <div className="max-w-4xl mx-auto p-6 sm:p-10 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-6">
           
           {/* Header Tag */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-6">
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
               About Us
             </span>
@@ -36,31 +36,31 @@ export default function About() {
             </span>
           </div>
 
-          <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              Full-Stack Engineers & <br />
+          <div className="space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Full-Stack Engineers &{" "}
               <span className="text-blue-600">Digital Product Builders</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
               We design and build modern digital products for businesses — from websites and web applications to AI-powered tools and cloud infrastructure.
             </p>
 
-            <p className="text-base text-slate-600 leading-relaxed font-normal">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
               Unlike traditional agencies that pass your project through layers of account managers and junior contractors, you work directly with senior product builders. We handle the architecture, design, and code from start to finish, ensuring high quality, fast execution, and clear communication.
             </p>
 
             {/* Quick Guarantees */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Direct senior collaboration</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Clean, maintainable code</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>On-time delivery</span>
               </div>
@@ -68,13 +68,13 @@ export default function About() {
           </div>
 
           {/* Direct Social / Connect Links */}
-          <div className="pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+          <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
               >
                 <GithubIcon className="w-4 h-4" />
                 <span>GitHub</span>
@@ -85,7 +85,7 @@ export default function About() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
               >
                 <LinkedinIcon className="w-4 h-4" />
                 <span>LinkedIn</span>
@@ -94,7 +94,7 @@ export default function About() {
 
               <a
                 href="mailto:hello@jovix.co.uk"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span>Email</span>
@@ -103,7 +103,7 @@ export default function About() {
 
             <a
               href="#contact"
-              className="text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
+              className="text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors"
             >
               Get in Touch →
             </a>

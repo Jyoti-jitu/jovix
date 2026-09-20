@@ -39,43 +39,43 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="w-full py-20 lg:py-28 bg-white border-b border-slate-200/80">
+    <section id="process" className="w-full py-12 lg:py-16 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="max-w-3xl mb-16 space-y-3">
+        <div className="max-w-3xl mb-8 sm:mb-10 space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-semibold uppercase tracking-wider">
             Simple 4-Step Process
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
             How We Build Your Product.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600">
+          <p className="text-sm sm:text-base text-slate-600">
             A clear, predictable roadmap from day one to launch day. No surprises.
           </p>
         </div>
 
         {/* 4 Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {steps.map((step) => (
             <div
               key={step.number}
-              className={`p-8 rounded-2xl border ${step.border} ${step.bg} bg-white shadow-xs hover:shadow-md hover:-translate-y-1 transition-all space-y-4`}
+              className={`p-5 sm:p-6 rounded-2xl border ${step.border} ${step.bg} bg-white shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all space-y-3`}
             >
               <div className="flex items-center justify-between">
-                <span className={`text-3xl font-extrabold font-mono ${step.color}`}>
+                <span className={`text-2xl sm:text-3xl font-extrabold font-mono ${step.color}`}>
                   {step.number}
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2.5 py-0.5 rounded-full">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
                   Phase
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+              <h3 className="text-lg font-bold text-slate-900 tracking-tight">
                 {step.title}
               </h3>
 
-              <p className="text-sm text-slate-600 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                 {step.description}
               </p>
             </div>

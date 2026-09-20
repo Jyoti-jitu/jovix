@@ -43,38 +43,38 @@ export default function TechStack() {
   ];
 
   return (
-    <section className="w-full py-16 lg:py-24 bg-[#FAFAF8] border-b border-slate-200/80">
+    <section className="w-full py-12 lg:py-16 bg-[#FAFAF8] border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
             Technology Stack
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Built with Modern, Reliable Technology.
           </h2>
-          <p className="text-sm sm:text-base text-slate-600">
+          <p className="text-xs sm:text-sm text-slate-600">
             Battle-tested frameworks chosen for speed, scalability, and long-term security.
           </p>
         </div>
 
         {/* Compact Visual Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 max-w-5xl mx-auto">
           {stackItems.map((item) => (
             <div
               key={item.category}
-              className={`p-6 rounded-2xl border ${item.color} bg-white shadow-xs hover:shadow-md transition-all flex items-start gap-4`}
+              className={`p-4 sm:p-5 rounded-xl border ${item.color} bg-white shadow-xs hover:shadow-md transition-all flex items-start gap-3.5`}
             >
-              <div className="p-2.5 rounded-xl bg-white shadow-xs border border-slate-100 shrink-0">
+              <div className="p-2 rounded-lg bg-white shadow-xs border border-slate-100 shrink-0">
                 {item.icon}
               </div>
 
-              <div className="space-y-1">
-                <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              <div className="space-y-0.5">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                   {item.category}
                 </div>
-                <div className="text-sm font-semibold text-slate-900 leading-snug">
+                <div className="text-xs sm:text-sm font-semibold text-slate-900 leading-snug">
                   {item.techs.join(" • ")}
                 </div>
               </div>
