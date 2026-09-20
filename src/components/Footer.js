@@ -89,30 +89,36 @@ export default function Footer() {
             </span>
 
             <ul className="space-y-3 text-xs">
-              {/* Jitu's Email */}
+              {/* Jyoti Swarup Parhi (Jitu) */}
               <li className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 hover:border-slate-700 transition-colors space-y-1">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-white text-[11px] uppercase tracking-wider">Jitu</span>
-                  <span className="text-[10px] text-blue-400 font-medium">Engineering & Tech</span>
+                  <div>
+                    <span className="font-bold text-white text-[12px] block">Jyoti Swarup Parhi</span>
+                    <span className="text-[10px] text-slate-400">Jitu • Co-Founder</span>
+                  </div>
+                  <span className="text-[10px] text-blue-400 font-semibold px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20">Engineering & Tech</span>
                 </div>
                 <a
                   href="mailto:jitu@jovix.co.uk"
-                  className="text-slate-300 hover:text-blue-400 font-mono text-xs transition-colors flex items-center gap-1.5"
+                  className="text-slate-300 hover:text-blue-400 font-mono text-xs transition-colors flex items-center gap-1.5 pt-0.5"
                 >
                   <Mail className="w-3 h-3 text-slate-500" />
                   <span>jitu@jovix.co.uk</span>
                 </a>
               </li>
 
-              {/* Jay's Email */}
+              {/* Jay Narayan Panda (Jay) */}
               <li className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 hover:border-slate-700 transition-colors space-y-1">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-white text-[11px] uppercase tracking-wider">Jay</span>
-                  <span className="text-[10px] text-emerald-400 font-medium">Product & Strategy</span>
+                  <div>
+                    <span className="font-bold text-white text-[12px] block">Jay Narayan Panda</span>
+                    <span className="text-[10px] text-slate-400">Jay • Co-Founder</span>
+                  </div>
+                  <span className="text-[10px] text-emerald-400 font-semibold px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20">Product & Strategy</span>
                 </div>
                 <a
                   href="mailto:jay@jovix.co.uk"
-                  className="text-slate-300 hover:text-emerald-400 font-mono text-xs transition-colors flex items-center gap-1.5"
+                  className="text-slate-300 hover:text-emerald-400 font-mono text-xs transition-colors flex items-center gap-1.5 pt-0.5"
                 >
                   <Mail className="w-3 h-3 text-slate-500" />
                   <span>jay@jovix.co.uk</span>
@@ -122,12 +128,15 @@ export default function Footer() {
               {/* General Inquiry Email */}
               <li className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 hover:border-slate-700 transition-colors space-y-1">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-white text-[11px] uppercase tracking-wider">Studio Office</span>
-                  <span className="text-[10px] text-purple-400 font-medium">General RFPs</span>
+                  <div>
+                    <span className="font-bold text-white text-[12px] block">Studio Office</span>
+                    <span className="text-[10px] text-slate-400">General RFPs & Inquiries</span>
+                  </div>
+                  <span className="text-[10px] text-purple-400 font-semibold px-2 py-0.5 rounded-md bg-purple-500/10 border border-purple-500/20">&lt; 24h Reply</span>
                 </div>
                 <a
                   href="mailto:hello@jovix.co.uk"
-                  className="text-slate-300 hover:text-purple-400 font-mono text-xs transition-colors flex items-center gap-1.5"
+                  className="text-slate-300 hover:text-purple-400 font-mono text-xs transition-colors flex items-center gap-1.5 pt-0.5"
                 >
                   <Mail className="w-3 h-3 text-slate-500" />
                   <span>hello@jovix.co.uk</span>
