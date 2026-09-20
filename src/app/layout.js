@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="font-sans antialiased bg-[#FAFAF8] text-slate-900 selection:bg-blue-600 selection:text-white">
+      <body className="font-sans antialiased bg-[#fcf7e3] text-slate-900 selection:bg-blue-600 selection:text-white">
         {children}
       </body>
     </html>

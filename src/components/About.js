@@ -21,7 +21,7 @@ function LinkedinIcon({ className = "w-4 h-4" }) {
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-16 lg:py-20 bg-[#FAFAF8] border-b border-slate-200/80">
+    <section id="about" className="w-full py-16 lg:py-20 bg-[#fcf7e3] border-b border-stone-300/80">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="max-w-4xl mx-auto p-6 sm:p-10 rounded-2xl bg-white border border-slate-200/80 shadow-xs space-y-6">

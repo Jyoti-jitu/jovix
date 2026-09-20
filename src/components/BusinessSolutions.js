@@ -55,7 +55,7 @@ export default function BusinessSolutions() {
   ];
 
   return (
-    <section id="solutions" className="w-full py-16 lg:py-20 bg-white border-b border-slate-200/80">
+    <section id="solutions" className="w-full py-16 lg:py-20 bg-[#fcf7e3] border-b border-stone-300/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}

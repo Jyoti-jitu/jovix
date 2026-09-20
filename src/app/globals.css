@@ -8,12 +8,12 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #FAFAF8;
+    background-color: #fcf7e3;
     color: #0F172A;
   }
 
   body {
-    background-color: #FAFAF8;
+    background-color: #fcf7e3;
     color: #0F172A;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }

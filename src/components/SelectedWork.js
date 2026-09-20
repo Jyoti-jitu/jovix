@@ -5,7 +5,7 @@ import { projects } from "@/data/projects";
 
 export default function SelectedWork() {
   return (
-    <section id="work" className="w-full py-16 lg:py-20 bg-[#FAFAF8] border-b border-slate-200/80">
+    <section id="work" className="w-full py-16 lg:py-20 bg-[#fcf7e3] border-b border-stone-300/80">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}

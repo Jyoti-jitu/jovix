@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <header className="sticky top-0 z-50 w-full bg-[#fcf7e3]/90 backdrop-blur-md border-b border-stone-300/80 transition-all">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Logo & Status */}
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200 bg-white px-6 py-6 flex flex-col gap-4 text-base font-medium text-slate-800 shadow-xl animate-in slide-in-from-top-2 duration-200">
+        <div className="md:hidden border-t border-slate-200 bg-[#fcf7e3] px-6 py-6 flex flex-col gap-4 text-base font-medium text-slate-800 shadow-xl animate-in slide-in-from-top-2 duration-200">
           {navLinks.map((link) => (
             <a
               key={link.label}

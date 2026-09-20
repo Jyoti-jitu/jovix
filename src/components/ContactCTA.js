@@ -20,7 +20,7 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="w-full py-16 lg:py-24 bg-[#FAFAF8] border-t border-slate-200/80">
+    <section id="contact" className="w-full py-16 lg:py-24 bg-[#fcf7e3] border-t border-stone-300/80">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
