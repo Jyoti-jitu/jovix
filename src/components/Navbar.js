@@ -1,0 +1,115 @@
+"use client";
+
+import { useState } from "react";
+import { ArrowRight, Menu, X, Sparkles } from "lucide-react";
+
+export default function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { label: "Services", href: "#services" },
+    { label: "Business Value", href: "#value" },
+    { label: "Delivered Work", href: "#work" },
+    { label: "Solutions", href: "#solutions" },
+    { label: "Process", href: "#process" },
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" }
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        {/* Logo & Status */}
+        <div className="flex items-center gap-6">
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 text-white flex items-center justify-center font-bold text-lg shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+              J
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold text-slate-900 text-base leading-tight group-hover:text-blue-600 transition-colors">
+                Jovix
+              </span>
+              <span className="text-xs text-slate-500 font-medium">
+                jovix.co.uk
+              </span>
+            </div>
+          </a>
+
+          {/* Availability pill */}
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>Available for new projects</span>
+          </div>
+        </div>
+
+        {/* Desktop Nav Links */}
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="hover:text-blue-600 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Right CTA */}
+        <div className="hidden sm:flex items-center gap-3">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 active:scale-[0.98] shadow-md shadow-blue-600/20 transition-all"
+          >
+            <span>Start a Project</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100"
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-slate-200 bg-white px-6 py-6 flex flex-col gap-4 text-base font-medium text-slate-800 shadow-xl animate-in slide-in-from-top-2 duration-200">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium w-fit">
+            <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+            <span>Available for new projects</span>
+          </div>
+
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 hover:text-blue-600 border-b border-slate-100 flex items-center justify-between"
+            >
+              <span>{link.label}</span>
+              <ArrowRight className="w-4 h-4 text-slate-400" />
+            </a>
+          ))}
+
+          <a
+            href="#contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="mt-2 w-full py-3 rounded-xl bg-blue-600 text-white text-center font-semibold shadow-md shadow-blue-600/20 flex items-center justify-center gap-2"
+          >
+            <span>Start a Project</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      )}
+    </header>
+  );
+}
