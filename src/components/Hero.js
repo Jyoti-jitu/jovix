@@ -31,10 +31,12 @@ export default function Hero() {
           playsInline
           preload="auto"
           poster="/video-thumb.jpg"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
         >
           <source src="/Procedural-Gradient-Background.mp4" type="video/mp4" />
         </video>
+        {/* Subtle bottom vignette to ensure buttons and text are crisp */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* Bottom Content: Supporting Text & Dual Action Buttons */}
