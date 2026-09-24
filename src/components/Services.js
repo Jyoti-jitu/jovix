@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Globe, Laptop, Cpu, Cloud, ShoppingCart, Check } from "lucide-react";
+import { ArrowRight, Globe, Laptop, Cpu, Cloud, ShoppingCart, Check, GraduationCap } from "lucide-react";
 import { services } from "@/data/services";
 
 export default function Services() {
@@ -9,7 +9,8 @@ export default function Services() {
     "web-apps": <Laptop className="w-6 h-6 text-purple-600" />,
     "ai-solutions": <Cpu className="w-6 h-6 text-emerald-600" />,
     "cloud-devops": <Cloud className="w-6 h-6 text-amber-600" />,
-    ecommerce: <ShoppingCart className="w-6 h-6 text-rose-600" />
+    ecommerce: <GraduationCap className="w-6 h-6 text-rose-600" />,
+    "final-year-projects": <GraduationCap className="w-6 h-6 text-rose-600" />
   };
 
   return (
@@ -74,7 +75,7 @@ export default function Services() {
                   href="#contact"
                   className={`inline-flex items-center gap-2 text-xs sm:text-sm font-bold ${service.textAccent} group-hover:gap-3 transition-all`}
                 >
-                  <span>Explore {service.title}</span>
+                  <span>{service.buttonText || `Explore ${service.title}`}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>

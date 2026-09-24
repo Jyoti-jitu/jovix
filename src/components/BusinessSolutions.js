@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Calendar, ShoppingBag, Terminal, Sparkles, LayoutDashboard, ArrowRight } from "lucide-react";
+import { Globe, Calendar, Terminal, Sparkles, LayoutDashboard, ArrowRight, GraduationCap } from "lucide-react";
 
 export default function BusinessSolutions() {
   const solutions = [
@@ -21,10 +21,10 @@ export default function BusinessSolutions() {
       accentBg: "bg-purple-50/60"
     },
     {
-      icon: <ShoppingBag className="w-6 h-6 text-rose-600" />,
-      title: "E-COMMERCE",
-      description: "For businesses selling physical or digital products online with fast checkout and payment processing.",
-      tag: "Online Sales",
+      icon: <GraduationCap className="w-6 h-6 text-rose-600" />,
+      title: "COLLEGE PROJECTS",
+      description: "Complete support for building and presenting your final-year college project—from topic selection to deployment.",
+      tag: "Final Year Projects",
       borderColor: "border-rose-200",
       accentBg: "bg-rose-50/60"
     },
@@ -100,10 +100,10 @@ export default function BusinessSolutions() {
               <div className="pt-4 mt-4 border-t border-slate-200/60">
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-blue-600 transition-colors uppercase tracking-wider"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 hover:text-blue-600 transition-colors uppercase tracking-wider group"
                 >
                   <span>Discuss Your Project</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>

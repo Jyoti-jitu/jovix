@@ -68,20 +68,23 @@ export const services = [
     ]
   },
   {
-    id: "ecommerce",
-    title: "E-COMMERCE",
-    badge: "Revenue Ready",
-    tagline: "Fast, modern online stores and payment-enabled digital experiences.",
+    id: "final-year-projects",
+    title: "FINAL YEAR PROJECTS",
+    badge: "Real Projects. Real Learning.",
+    tagline: "Turn your academic idea into a working, real-world project with end-to-end guidance.",
+    buttonText: "Explore Projects",
     color: "rose",
     accent: "#F43F5E",
     bgLight: "bg-rose-50/80",
     border: "border-rose-200",
     textAccent: "text-rose-600",
     features: [
-      "1-click checkout integration",
-      "Instant inventory sync",
-      "Custom product configurators",
-      "Stripe & Razorpay payments"
+      "Web & App Development",
+      "AI / ML Projects",
+      "IoT & Embedded Systems",
+      "Software & Enterprise Projects",
+      "Research & Innovation",
+      "End-to-End Support"
     ]
   }
 ];
